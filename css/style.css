@@ -1,0 +1,108 @@
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desatrated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --transparent-white-h: hsla(0, 0%, 100%, 0.6);
+  --transparent-white-p: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%
+}
+
+.grid-container {
+  background-color: var(--dark-desatrated-blue);
+  display: flex;
+  border-radius: 10px;
+  min-height: 440px;
+  overflow: hidden;
+}
+
+article {
+  padding: 70px;
+  max-width: 400px;
+  min-height: 100%;
+  text-align: left;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+header span {
+  color: var(--soft-violet);
+}
+
+.main-paragraph {
+  color: var(--transparent-white-h);
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+}
+
+.image-div {
+  background: linear-gradient(hsla(277, 64%, 61%, 0.5), hsla(277, 64%, 61%, 0.5)), url("../images/image-header-desktop.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 540px;
+  height: 446px;
+}
+
+.inner-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+}
+
+.inner-grid h1 {
+  color: var(--white);
+}
+
+.inner-grid p {
+  color: var(--transparent-white-h);
+  font-size: 14px;
+}
+
+@media screen and (max-width: 800px){
+  .grid-container {
+    flex-direction: column;
+    width: 320px;
+  }
+  .image-div {
+    background: linear-gradient(hsla(277, 64%, 61%, 0.5), hsla(277, 64%, 61%, 0.5)), url("../images/image-header-mobile.jpg");
+    order: 1;
+    height: 235px;
+    width: 320px;
+  }
+  article{
+    order: 2;
+    padding: 50px 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .inner-grid {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+}
