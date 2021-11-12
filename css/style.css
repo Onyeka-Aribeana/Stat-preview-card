@@ -105,4 +105,8 @@ header span {
     flex-direction: column;
     margin-top: 40px;
   }
+
+  .stat {
+    margin-top: 15px;
+  }
 }
